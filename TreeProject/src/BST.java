@@ -6,7 +6,7 @@ public class BST<T extends Comparable<? super T>> implements BSTreeInterface<T> 
     enum Traversal{BYLEVEL, PREORDER, POSORDER, INORDER}
 
     private NodeTreeInterface<T> root;
-    private Traversal aTraversal;
+    private Traversal aTraversal = Traversal.BYLEVEL;
 
     @Override
     public void insert(T myData) {
@@ -149,7 +149,7 @@ public class BST<T extends Comparable<? super T>> implements BSTreeInterface<T> 
 
     public boolean testAVL(){
         if (root == null)
-            return false;
+            return true;
         return testAVL(root);
     }
 

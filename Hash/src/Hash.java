@@ -1,23 +1,22 @@
-import java.util.LinkedList;
-import java.util.Map;
 import java.util.function.Function;
 
 public class Hash<K, V> 
 {
-	//enum State {BajaLogica, Ocupado};
+	enum State {BajaLogica, Ocupado}
 	private int initialLookupSize= 10;
-	private double threshold = 0.75;
+	private double threshold;
 	private int dim;
 	
 	// estatica. No crece. Espacio suficiente...
-	//private Node<K,V>[] LookUp= new Node[initialLookupSize];
-	private LinkedList<Node<K, V>>[] LookUp = new LinkedList[initialLookupSize];
+	private Node<K,V>[] LookUp= new Node[initialLookupSize];
+	
 	private Function<? super K, Integer> prehash;
 	
 	public Hash( Function<? super K, Integer> mappingFn)
 	{
 		prehash= mappingFn;
 		dim = 0;
+		threshold = 0.75;
 	}
 	
 	// ajuste al tamaño de la tabla
@@ -59,44 +58,32 @@ public class Hash<K, V>
 	// insert = update
 	public void insert(K key, V value)
 	{
-		if((double)dim/LookUp.length >= 0.75){
-			LinkedList<Node<K, V>>[] aux = new LinkedList[LookUp.length + initialLookupSize];
+		if((double)dim/LookUp.length >= threshold){
+			Node<K,V>[] aux = new Node[LookUp.length + initialLookupSize];
 			System.arraycopy(LookUp,0,aux,0, LookUp.length);
 			LookUp = aux;
 			reposition(LookUp);
 		}
-		int pos = hash(key);
-		int list_pos = hash(key);
-		if(LookUp[pos].get(list_pos) == null) {
-			if (LookUp[pos] != null) {
-				while (LookUp[pos].get(list_pos) != null && LookUp[pos].get(list_pos) != null) {
-					list_pos++;
-				}
-			}
-			LookUp[pos].add(list_pos, new Node<>(key, value));
-			dim++;
-		}
-		/*if(get(key) == null) {
+		if(get(key) == null) {
 			int pos = hash(key);
 			if (LookUp[pos] != null || (LookUp[pos] != null && LookUp[pos].state.equals(State.Ocupado))) {
 				while (LookUp[pos] != null && (LookUp[pos] != null && LookUp[pos].state.equals(State.Ocupado))) {
 					pos++;
 				}
 			}
-			LookUp[pos] = new Node<K, V>(key, value);
+			LookUp[pos] = new Node<>(key, value);
 			dim++;
-		}*/
+		}
 	}
 
-	private void reposition(LinkedList<Node<K,V>>[] lookUp) {
-		
-		/*for(int i = 0; i < lookUp.length; i++){
+	private void reposition(Node<K,V>[] lookUp) {
+		for(int i = 0; i < lookUp.length; i++){
 			if(lookUp[i] != null){
 				if(i != hash(lookUp[i].key)){
 					LookUp[i] = swap(lookUp[i]);
 				}
 			}
-		}*/
+		}
 	}
 
 	private Node<K,V> swap(Node<K,V> element){
@@ -115,11 +102,8 @@ public class Hash<K, V>
 			while(!LookUp[pos].key.equals(key)){
 				pos++;
 			}
-			if(LookUp[pos+1] == null){
-				LookUp[pos] = null;
-			}else{
-				LookUp[pos].state = State.BajaLogica;
-			}
+			
+			LookUp[pos].state = State.BajaLogica;
 		}
 		dim--;
 	}

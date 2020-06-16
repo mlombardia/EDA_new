@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 
 public class AdjacencyMatrixGraph<V> implements GraphService<V> {
@@ -259,7 +256,30 @@ public class AdjacencyMatrixGraph<V> implements GraphService<V> {
 	    // FALTA
 	    @Override
 	    public void printDFS(V startNode) {
+	    	ArrayList<Boolean> visited = new ArrayList<>();
+			Stack<Integer> stack = new Stack<Integer>();
 
+			int currentPos = vertexes.indexOf(startNode);
+			if (currentPos == -1)
+				return;
+
+			vertexes.stream().forEach(x -> visited.add(false));
+
+			stack.push(currentPos);
+
+			while (!stack.isEmpty()){
+				currentPos = stack.pop();
+				if (visited.get(currentPos))
+					continue;
+
+				System.out.println(String.format("%s", vertexes.get(currentPos)));
+				visited.set(currentPos, true);
+
+				for (int row = 0; row < matrix.cantElements(); row++){
+					if (matrix.get(row, currentPos) && !visited.get(row))
+						stack.push(row);
+				}
+			}
 	    }
 
 	    
@@ -276,10 +296,12 @@ public class AdjacencyMatrixGraph<V> implements GraphService<V> {
 		}
 		
 		// FALTA !!!!!
-		class myIteratorDFS implements Iterator<V>
-		{
+		class myIteratorDFS implements Iterator<V>{
+
+	    	V current;
 
 			public myIteratorDFS(V startNode) {
+				current = startNode;
 			}
 
 			@Override

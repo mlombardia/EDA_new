@@ -30,9 +30,9 @@ public class TestGUI extends Application {
 		stage.show();
 		//myTree.preOrder();
 		//myTree.postOrder();
-		myTree.inOrder();
-		//myTree.printByLevels();
-		myTree.setTraversal(BST.Traversal.INORDER);
+		//myTree.inOrder();
+		myTree.printByLevels();
+		//myTree.setTraversal(BST.Traversal.INORDER);
 		for (Integer data : myTree){
 			System.out.print(data + " ");
 		}

@@ -2,8 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01b1bc3f-2830-4350-883e-76c838c765ad" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../ExpAnalyzer/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ExpAnalyzer/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ExpAnalyzer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ExpAnalyzer/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphProjectPosta/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphProjectPosta/src/main/java/CSVTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphProjectPosta/src/main/java/Listen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphProjectPosta/src/main/java/ListenEdge.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphProjectPosta/src/main/java/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphProjectPosta/src/main/java/PrintableWieghtedEdge.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphProjectPosta/src/main/java/TestGUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphProjectPosta/src/main/java/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphProjectPosta/src/main/resources/artistssmall.tsv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphProjectPosta/src/main/resources/listensmall.tsv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphProjectPosta/src/main/resources/userssmall.tsv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TreeProject/src/BTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TreeProject/src/BTreeTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TreeProject/src/ITree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GraphProjectPosta/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GraphProjectPosta/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GraphProjectPosta/src/main/java/AdjacencyMatrixGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GraphProjectPosta/src/main/java/AdjacencyMatrixGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GraphProjectPosta/src/main/java/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GraphProjectPosta/src/main/java/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GraphProjectPosta/target/classes/AdjacencyMatrixGraph$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GraphProjectPosta/target/classes/AdjacencyMatrixGraph$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GraphProjectPosta/target/classes/AdjacencyMatrixGraph$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GraphProjectPosta/target/classes/AdjacencyMatrixGraph$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GraphProjectPosta/target/classes/AdjacencyMatrixGraph$myIteratorBFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GraphProjectPosta/target/classes/AdjacencyMatrixGraph$myIteratorBFS.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GraphProjectPosta/target/classes/AdjacencyMatrixGraph$myIteratorDFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GraphProjectPosta/target/classes/AdjacencyMatrixGraph$myIteratorDFS.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GraphProjectPosta/target/classes/AdjacencyMatrixGraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GraphProjectPosta/target/classes/AdjacencyMatrixGraph.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GraphProjectPosta/target/classes/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GraphProjectPosta/target/classes/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TreeProject/out/production/TreeProject/BST.class" beforeDir="false" afterPath="$PROJECT_DIR$/../TreeProject/out/production/TreeProject/BST.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TreeProject/out/production/TreeProject/TestGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/../TreeProject/out/production/TreeProject/TestGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TreeProject/src/BST.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TreeProject/src/BST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TreeProject/src/TestGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TreeProject/src/TestGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +55,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SortedLinkedList" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -43,6 +68,7 @@
       <option name="presentableId" value="Default" />
       <updated>1588295267414</updated>
       <workItem from="1588295268659" duration="141000" />
+      <workItem from="1591884738664" duration="20000" />
     </task>
     <servers />
   </component>
@@ -50,10 +76,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="739" y="179" key="FileChooserDialogImpl" timestamp="1588295345060">
+    <state x="739" y="179" key="FileChooserDialogImpl" timestamp="1591884756822">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="739" y="179" key="FileChooserDialogImpl/0.0.1920.1040/-1360.0.1360.728@0.0.1920.1040" timestamp="1588295345060" />
+    <state x="739" y="179" key="FileChooserDialogImpl/0.0.1920.1040/-1360.0.1360.728@0.0.1920.1040" timestamp="1591884756822" />
     <state x="342" y="140" key="new project wizard" timestamp="1588295407817">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

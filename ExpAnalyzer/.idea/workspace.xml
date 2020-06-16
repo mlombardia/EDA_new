@@ -1,7 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="53687fc4-7ce2-4b8b-940c-dc72cf3c6d2e" name="Default" comment="" />
+    <list default="true" id="53687fc4-7ce2-4b8b-940c-dc72cf3c6d2e" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/../GraphProjectPosta/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphProjectPosta/src/main/java/CSVTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphProjectPosta/src/main/java/Listen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphProjectPosta/src/main/java/ListenEdge.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphProjectPosta/src/main/java/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphProjectPosta/src/main/java/PrintableWieghtedEdge.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphProjectPosta/src/main/java/TestGUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphProjectPosta/src/main/java/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphProjectPosta/src/main/resources/artistssmall.tsv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphProjectPosta/src/main/resources/listensmall.tsv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GraphProjectPosta/src/main/resources/userssmall.tsv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hash/src/HashOpen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Hash/src/HashOpenTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SortedLinkedList/src/Queue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SortedLinkedList/src/QueueService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SortedLinkedList/src/QueueTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TreeProject/src/BTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TreeProject/src/BTreeTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TreeProject/src/ITree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TreeProject/src/Sandbox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GraphProjectPosta/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GraphProjectPosta/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GraphProjectPosta/src/main/java/AdjacencyMatrixGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GraphProjectPosta/src/main/java/AdjacencyMatrixGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GraphProjectPosta/src/main/java/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GraphProjectPosta/src/main/java/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GraphProjectPosta/target/classes/AdjacencyMatrixGraph$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GraphProjectPosta/target/classes/AdjacencyMatrixGraph$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GraphProjectPosta/target/classes/AdjacencyMatrixGraph$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GraphProjectPosta/target/classes/AdjacencyMatrixGraph$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GraphProjectPosta/target/classes/AdjacencyMatrixGraph$myIteratorBFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GraphProjectPosta/target/classes/AdjacencyMatrixGraph$myIteratorBFS.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GraphProjectPosta/target/classes/AdjacencyMatrixGraph$myIteratorDFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GraphProjectPosta/target/classes/AdjacencyMatrixGraph$myIteratorDFS.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GraphProjectPosta/target/classes/AdjacencyMatrixGraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GraphProjectPosta/target/classes/AdjacencyMatrixGraph.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GraphProjectPosta/target/classes/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GraphProjectPosta/target/classes/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hash/out/production/Hash/Hash$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Hash/out/production/Hash/Hash$Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hash/out/production/Hash/Hash.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Hash/out/production/Hash/Hash.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hash/src/Hash.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Hash/src/Hash.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortedLinkedList/out/production/SortedLinkedList/SortedLinkedListAllowsRemoves$SortedLinkedListIteratorAllowsRemoves.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SortedLinkedList/out/production/SortedLinkedList/SortedLinkedListAllowsRemoves$SortedLinkedListIteratorAllowsRemoves.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortedLinkedList/out/production/SortedLinkedList/SortedLinkedListAllowsRemoves.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SortedLinkedList/out/production/SortedLinkedList/SortedLinkedListAllowsRemoves.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortedLinkedList/out/production/SortedLinkedList/SortedLinkedListAllowsRemovesTester.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SortedLinkedList/out/production/SortedLinkedList/SortedLinkedListAllowsRemovesTester.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortedLinkedList/src/SortedLinkedListAllowsRemoves.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SortedLinkedList/src/SortedLinkedListAllowsRemoves.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortedLinkedList/src/SortedLinkedListAllowsRemovesTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SortedLinkedList/src/SortedLinkedListAllowsRemovesTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TO-DO/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TO-DO/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TreeProject/out/production/TreeProject/BST.class" beforeDir="false" afterPath="$PROJECT_DIR$/../TreeProject/out/production/TreeProject/BST.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TreeProject/out/production/TreeProject/BSTree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TreeProject/out/production/TreeProject/ExpTree$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TreeProject/out/production/TreeProject/ExpTree$Utils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TreeProject/out/production/TreeProject/ExpTree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TreeProject/out/production/TreeProject/ExpTreeTester.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TreeProject/out/production/TreeProject/TestGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/../TreeProject/out/production/TreeProject/TestGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TreeProject/src/BST.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TreeProject/src/BST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TreeProject/src/BSTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TreeProject/src/ExpTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TreeProject/src/ExpTree/ExpTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TreeProject/src/ExpTreeTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TreeProject/src/ExpTree/ExpTreeTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TreeProject/src/TestGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TreeProject/src/TestGUI.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,9 +90,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TO-DO" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -103,6 +156,9 @@
       <workItem from="1588158281758" duration="1537000" />
       <workItem from="1588171663493" duration="176000" />
       <workItem from="1588295232413" duration="35000" />
+      <workItem from="1592084885210" duration="18000" />
+      <workItem from="1592084921673" duration="27000" />
+      <workItem from="1592085012110" duration="599000" />
     </task>
     <servers />
   </component>

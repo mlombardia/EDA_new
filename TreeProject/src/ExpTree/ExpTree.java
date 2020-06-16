@@ -1,3 +1,5 @@
+package ExpTree;
+
 import java.util.Scanner;
 
 
@@ -13,7 +15,14 @@ public class ExpTree {
 	    
 	    buildTree(line);
 	}
-	
+
+	public ExpTree(String infija, double... params){
+		Scanner inputScanner = new Scanner(infija).useDelimiter("\\n");
+		String line = inputScanner.nextLine();
+		inputScanner.close();
+
+		buildTree(line, params);
+	}
 	
 	public ExpTree() {
 	    System.out.print("Introduzca la expresión en notación infija con todos los parentesis y blancos: ");
@@ -32,6 +41,14 @@ public class ExpTree {
 		  Scanner lineScanner = new Scanner(line).useDelimiter("\\s+");
 		  root= new Node(lineScanner);
 		  lineScanner.close();
+	}
+
+	private void buildTree(String line, double[] params){
+
+		//space separator among tokens
+		Scanner lineScanner = new Scanner(line).useDelimiter("\\s+");
+		root = new Node(lineScanner, params);
+		lineScanner.close();
 	}
 
 	public void preorder(){
@@ -135,6 +152,8 @@ public class ExpTree {
 	static final class Node {
 		private String data;
 		private Node left, right;
+		private double[] params;
+		int params_idx;
 		
 		private Scanner lineScanner;
 
@@ -146,7 +165,19 @@ public class ExpTree {
 			left= auxi.left;
 			right= auxi.right;
 			
-			if (lineScanner.hasNext() ) 
+			if (lineScanner.hasNext())
+				throw new RuntimeException("Bad expression");
+		}
+
+		public Node (Scanner theLineScanner, double[] params){
+			lineScanner = theLineScanner;
+			this.params = params;
+
+			Node auxi = buildExpression();
+			data = auxi.data;
+			left = auxi.left;
+			right = auxi.right;
+			if (lineScanner.hasNext() || (params != null && params_idx != params.length))
 				throw new RuntimeException("Bad expression");
 		}
 		
@@ -185,13 +216,21 @@ public class ExpTree {
 				return n;
 			}
 
-			//constant
+			//constant or var (to-do)
 			if (!lineScanner.hasNext())
 				throw new RuntimeException("missing expression");
 
 			n.data = lineScanner.next();
+
+			if (Utils.isVar(n.data)){
+				if (params_idx >= params.length)
+					throw new RuntimeException("Arguments missing");
+				n.data = String.valueOf(params[params_idx++]);
+			}
+
+
 			if (!Utils.isConstant(n.data)){
-				throw new RuntimeException(String.format("Illegal term %s", lineScanner));
+				throw new RuntimeException(String.format("Illegal term %s", n.data));
 			}
 			return n;
 		}
@@ -201,8 +240,12 @@ public class ExpTree {
 			return s.equals("+") || s.equals("-") || s.equals("*") || s.equals("/");
 		}
 
+		public static boolean isVar(String s){
+			return s.equals("%.2d");
+		}
+
 		public static boolean isConstant(String s){
-			return !(isOperator(s) || s.equals("(") || s.equals(")"));
+			return s.matches("-*[0-9]+\\.?[0-9]*");
 		}
 	}
-}  // end ExpTree
+}  // end ExpTree.ExpTree

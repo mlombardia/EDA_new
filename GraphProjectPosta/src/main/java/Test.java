@@ -1,3 +1,10 @@
+import org.jgrapht.Graph;
+import org.jgrapht.GraphPath;
+import org.jgrapht.Graphs;
+import org.jgrapht.alg.shortestpath.DijkstraShortestPath;
+import org.jgrapht.graph.DefaultWeightedEdge;
+import org.jgrapht.graph.builder.GraphTypeBuilder;
+
 import java.util.List;
 
 public class Test {
@@ -77,7 +84,38 @@ public class Test {
 	}
 	
 	public static void main(String[] args) {
-	 	
+		Graph<String, DefaultWeightedEdge> flight = GraphTypeBuilder.<String, DefaultWeightedEdge>
+				undirected().allowingMultipleEdges(false)
+				.allowingSelfLoops(false).weighted(true)
+				.edgeClass(DefaultWeightedEdge.class)
+				.buildGraph();
+		flight.addVertex("HNL");
+		flight.addVertex("LAX");
+		flight.addVertex("SFO");
+		flight.addVertex("ORD");
+		flight.addVertex("DFW");
+		flight.addVertex("LGA");
+		flight.addVertex("MIA");
+		flight.addVertex("PVD");
+
+		flight.setEdgeWeight( flight.addEdge("HNL", "LAX"), 2555);
+		Graphs.addEdge(flight, "LAX", "SFO", 337);
+
+		flight.setEdgeWeight( flight.addEdge("SFO", "ORD"), 1843);
+		flight.setEdgeWeight( flight.addEdge("LAX", "ORD"), 1743);
+		flight.setEdgeWeight( flight.addEdge("LAX", "DFW"), 1233);
+		flight.setEdgeWeight( flight.addEdge("DFW", "ORD"), 802);
+		flight.setEdgeWeight( flight.addEdge("ORD", "PVD"), 849);
+		flight.setEdgeWeight( flight.addEdge("DFW", "LGA"), 1387);
+		flight.setEdgeWeight( flight.addEdge("DFW", "MIA"), 1120);
+		flight.setEdgeWeight( flight.addEdge("LGA", "PVD"), 142);
+		flight.setEdgeWeight( flight.addEdge("LGA", "MIA"), 1099);
+		flight.setEdgeWeight( flight.addEdge("MIA", "PVD"), 1205);
+
+		System.out.println(flight);
+
+		printShortestPath(flight, "PVD", "PVD");
+
 		GraphService<Character> g = createModel2();
 		
 	 	System.out.println(String.format("#vertices: %d", g.vertexesSize() ));
@@ -122,5 +160,11 @@ public class Test {
 	 	for (Character aVertex : g.getBFS('C')) {
 			System.out.println(aVertex);
 		}
-	} 	
+	}
+
+	public static void printShortestPath(Graph<String, DefaultWeightedEdge> graph, String source, String sink){
+		GraphPath<String, DefaultWeightedEdge> path;
+		path = DijkstraShortestPath.findPathBetween(graph, source, sink);
+		System.out.println("Shortest path found: "+ (path.getEdgeList().size() == 0? "[]" : path) + "\n"+ path.getWeight());
+	}
 }

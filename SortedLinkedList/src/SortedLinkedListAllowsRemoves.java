@@ -12,10 +12,12 @@ public class SortedLinkedListAllowsRemoves<T extends Comparable<? super T>> exte
     private class SortedLinkedListIteratorAllowsRemoves extends SortedLinkedListIterator{
 
         private Node previous;
+        private boolean shouldThrow;
 
         private SortedLinkedListIteratorAllowsRemoves(){
             super();
             previous = firstElement;
+            shouldThrow = true;
         }
 
         @Override
@@ -26,6 +28,8 @@ public class SortedLinkedListAllowsRemoves<T extends Comparable<? super T>> exte
                     previous = previous.next;
                 }
             }
+
+            shouldThrow = false;
             return super.next();
             /*if(previous != current)
                 previous = previous.next;
@@ -34,6 +38,9 @@ public class SortedLinkedListAllowsRemoves<T extends Comparable<? super T>> exte
 
         @Override
         public void remove(){
+            if (shouldThrow)
+                throw new IllegalStateException();
+
             if(previous == firstElement)
                 firstElement=current;
 
@@ -42,6 +49,7 @@ public class SortedLinkedListAllowsRemoves<T extends Comparable<? super T>> exte
             if(current == null)
                 lastElement = previous;
 
+            shouldThrow = true;
             size--;
         }
     }
