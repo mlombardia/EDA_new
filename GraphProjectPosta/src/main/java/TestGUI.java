@@ -54,19 +54,19 @@ public class TestGUI extends JApplet
         // 	Graph<URI, DefaultEdge> g= null;
         // 	Graph<String, DefaultWeightedEdge> g= null;
         //	Graph<String, PrintableWeightedEdge> g= null;
-        Graph<Person, ListenEdge> g= null;
+        Graph<String, PrintableWieghtedEdge> g= null;
 
-        try {
-            g = createModelCsv();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+        //try {
+            g = createModel();
+        //} catch (FileNotFoundException e) {
+            //e.printStackTrace();
+        //}
 
-        Graph<Person,ListenEdge> gidol = generateIdol65(g);
+        //Graph<Person,ListenEdge> gidol = generateIdol(g);
 
-        for (Person person : g.vertexSet()){
+        /*for (Person person : g.vertexSet()){
             System.out.println(g.incomingEdgesOf(person) + "" + person.getName());
-        }
+        }*/
 
         //gidol=generateIdolReduced(gidol);
 
@@ -77,7 +77,7 @@ public class TestGUI extends JApplet
         //    System.out.println(person);
 
         // create a visualization using JGraph, via an adapter
-        JGraphXAdapter jgxAdapter = new JGraphXAdapter<>(gidol);
+        JGraphXAdapter jgxAdapter = new JGraphXAdapter<>(g);
 
         setPreferredSize(DEFAULT_SIZE);
         mxGraphComponent component = new mxGraphComponent(jgxAdapter);

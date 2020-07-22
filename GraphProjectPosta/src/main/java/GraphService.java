@@ -50,5 +50,5 @@ public interface GraphService<V> {
 	  // devuelve iterados con los nodos alcanzables a partir de V, recorriendo en DFS
 	  Iterable<V> getDFS(V startNode);
 
-
+	  int connectedComponents();
 }
